@@ -6,8 +6,7 @@ import { SearchContext } from "../App";
 import GridShow from "../components/GridShow";
 import BackDrop from "../components/BackDrop";
 
-
-const useStyles = makeStyles((theme: Theme) => ({  
+const useStyles = makeStyles((theme: Theme) => ({
   resultWrapper: {
     display: "flex",
     flexWrap: "wrap",
@@ -15,19 +14,18 @@ const useStyles = makeStyles((theme: Theme) => ({
   grid: {
     [theme.breakpoints.down("lg")]: {
       width: "23%",
-    },   
+    },
     [theme.breakpoints.down("md")]: {
       width: "31%",
-    },  
+    },
     [theme.breakpoints.down("sm")]: {
       width: "48%",
     },
     [theme.breakpoints.down("xs")]: {
       width: "100%",
     },
-    width: "100%",
+    width: "23%",
     padding: "1%",
-    
   },
 }));
 interface IProps {}

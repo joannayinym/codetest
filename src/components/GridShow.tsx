@@ -4,6 +4,7 @@ import { Theme, Button,Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { FlickrItem, SearchContext } from "../App";
 import MagniferDialog from "./MagniferDialog";
+import ZoomInIcon from '@material-ui/icons/ZoomIn';
 
 const useStyles = makeStyles((theme: Theme) => ({
   gridWrapper: {
@@ -76,7 +77,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       color: "rgb(0, 0, 0)",
     },
   },
-  magniferButton: {
+  magnifierButton: {
     display: "initial",
     "& > button": {
       margin: "2px",
@@ -115,7 +116,7 @@ const GridShow = (props: IProps) => {
     setKeyword(tag);
   };
 
-  const magniferHandler = () => {
+  const magnifierHandler = () => {
     setShowBackDrop(true);
   };
   const closeHandler = () => {
@@ -126,12 +127,12 @@ const GridShow = (props: IProps) => {
       className={classes.gridWrapper}
       style={{ background: `url(${media.m}) center center/cover no-repeat` }}      
     >
-      <div className={classes.magniferButton}>
+      <div className={classes.magnifierButton}>
         <Button 
           variant="contained"
           color="default"
-          onClick={magniferHandler}
-        >magnifer
+          onClick={magnifierHandler}
+        >magnifier
         </Button>
       </div>
     {showBackDrop ? <MagniferDialog img={media.m.replace("_m.", "_b.")} onClose={closeHandler} /> : null}
